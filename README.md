@@ -10,7 +10,7 @@ manifest test
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo'
 export AOSP_MANIFEST='https://github.com/repo-scm/manifest'
 
-repo init --partial-clone -b main -u $AOSP_MANIFEST --manifest-depth=1 -c --depth=1 -b android-15.0.0_r17
+repo init --partial-clone -b main -u $AOSP_MANIFEST --manifest-depth=1 -c --depth=1 -b main
 repo sync -c -j4 --fail-fast
 ```
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/"/>
+  <remote name="aosp" fetch="https://mirrors.tuna.tsinghua.edu.cn/git/AOSP" review="https://android-review.googlesource.com/"/>
 
-  <default remote="aosp" revision="refs/tags/android-15.0.0_r17" sync-j="4"/>
+  <default remote="aosp" revision="main" sync-j="4"/>
 
   <project name="platform/build/blueprint" path="build/blueprint" groups="pdk,tradefed"/>
   <project name="platform/build/soong" path="build/soong" groups="pdk,tradefed">
     <linkfile src="root.bp" dest="Android.bp"/>
     <linkfile src="bootstrap.bash" dest="bootstrap.bash"/>
   </project>
-  <project name="platform/external/linux-kselftest" path="external/linux-kselftest" groups="vts,pdk" clone-depth="1"/>
+  <project name="platform/packages/apps/Settings" path="packages/apps/Settings" groups="pdk" revision="main" clone-depth="1"/>
   <project name="platform/system/core" path="system/core" groups="pdk"/>
 
   <contactinfo bugurl="go/repo-bug"/>
